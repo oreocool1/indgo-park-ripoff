@@ -4,6 +4,11 @@ import time
 import webbrowser
 end = "no"
 Death = "alive"
+ramplush = "no"
+collectible2 = "no"
+collectible3 = "no"
+collectible4 = "no"
+collectible5 = "no"
 while end != "Yes" and end != "Death1" and end != "Death2":
     print("You were urban exploring before you found and an abandond park anddeided to enter it")
     option = input (''' You see an open door What do you do 
@@ -44,7 +49,15 @@ while end != "Yes" and end != "Death1" and end != "Death2":
                         time.sleep(0.5)
                         end = "Yes"
                         while end != "Yes" and end != "Death1" and end != "Death2":
-                            print("")
+                            option = input('''What do you want to do
+                             Inspect Rambally plushy [A]
+                             Inspect mysterious plushy [B]
+                             Walk into the park [C]''')
+                            if option == "[A]":
+                                print ("Well done you have collected the Rambally plushy")
+                                ramplush = "Yes"
+                            elif option == "[B]":
+                                print("Well done you have collected the mysterious plushy")
                     else: print("Please chose an option")
                     time.sleep(0.5)
             elif option == "[B]":
