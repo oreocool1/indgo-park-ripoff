@@ -1,14 +1,15 @@
 from os import name
+from pickle import TRUE
 from re import A
 import time
 import webbrowser
 end = "no"
 Death = "alive"
-ramplush = "no"
-mollyplush = "no"
-collectible3 = "no"
-collectible4 = "no"
-collectible5 = "no"
+ramplush = False
+mollyplush = False
+collectible3 = False
+collectible4 = False
+collectible5 = False
 while end != "Yes" and end != "Death1" and end != "Death2":
     print("You were urban exploring before you found and an abandond park anddeided to enter it")
     option = input (''' You see an open door What do you do 
@@ -56,9 +57,9 @@ while end != "Yes" and end != "Death1" and end != "Death2":
                             if option == "[A]":
                                 print ("Well done you have collected the Rambally plushy")
                                 ramplush = "Yes"
-                            elif option == "[B]" and mollyplush != "Yes":
+                            elif option == "[B]" and not mollyplush:
                                 print("Well done you have collected the mysterious plushy")
-                                mollyplush = "Yes"
+                                mollyplush = True
                             else: print("Unable to do this action")
                     else: print("Please chose an option")
                     time.sleep(0.5)
