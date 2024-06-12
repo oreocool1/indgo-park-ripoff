@@ -1,4 +1,5 @@
 from os import name
+from re import A
 import time
 import webbrowser
 end = "no"
@@ -25,8 +26,23 @@ while end != "Yes" and end != "Death1" and end != "Death2":
                 time.sleep(2.0)
                 name = input("What is your name?")
                 print ("Hi", name, "Meet me at the main gait and i'll let you in")
-                #time.sleep(1.0)
-                end = "Yes"
+                time.sleep(1.0)
+                while end != "Yes" and end != "Death1" and end != "Death2":
+                    print("Whats the hold up the gate should be open ... mhhhh my mistake the gate is not open seemes like an error boot up the genrator to get the gate up")
+                    time.sleep(2.0)
+                    option = input('''Should you turn on the Genrator?
+                          No[A]
+                          Yes[B]
+                          ''')
+                    if option == "[A]":
+                        print("... Nothing happend")
+                        time.sleep(1.0)
+                    elif option == "[B]":
+                        print("You turn on the genrator and go back to the gate.")
+                        #time.sleep(1.0)
+                        end = "Yes"
+                    else: print("Please chose an option")
+                    time.sleep(0.5)
             elif option == "[B]":
                 print("Buddy your going the rong way the regstration dest is this way (points to the left)")
                 time.sleep(0.9)
