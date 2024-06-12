@@ -48,18 +48,29 @@ while end != "Yes" and end != "Death1" and end != "Death2":
                         time.sleep(1.0)
                         print("Alright for real this time Welcome to indigo park.")
                         time.sleep(0.5)
-                        #end = "Yes"
                         while end != "Yes" and end != "Death1" and end != "Death2":
                             option = input('''What do you want to do
                              Inspect Rambally plushy [A]
                              Inspect mysterious plushy [B]
                              Walk into the park [C]''')
-                            if option == "[A]":
+                            if option == "[A]" and not ramplush:
                                 print ("Well done you have collected the Rambally plushy")
-                                ramplush = "Yes"
+                                ramplush = True
+                                time.sleep(1.0)
+                            elif option == "[A]" and ramplush:
+                                ("You have alreddy collected this plush")
+                                time.sleep(1.0)
                             elif option == "[B]" and not mollyplush:
                                 print("Well done you have collected the mysterious plushy")
                                 mollyplush = True
+                                time.sleep(1.0)
+                            elif option == "[B]" and mollyplush:
+                                print("You have already collected this plush.")
+                                time.sleep(1.0)
+                            elif option == "[C]":
+                                end = "Yes"
+                                print ("Enter critter cuff voice lines")
+                                time.sleep(1.0)
                             else: print("Unable to do this action")
                     else: print("Please chose an option")
                     time.sleep(0.5)
