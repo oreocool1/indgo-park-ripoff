@@ -69,8 +69,10 @@ while end != "Yes" and end != "Death1" and end != "Death2":
                                 time.sleep(1.0)
                             elif option == "[C]":
                                 end = "Yes"
-                                print ("Enter critter cuff voice lines")
+                                print ("You enter the park")
                                 time.sleep(1.0)
+                                while end != "Yes" and end != "Death1" and end != "Death2":
+                                    print("The enttrance clapses leaving you trapped inside the entrance")
                             else: print("Unable to do this action")
                     else: print("Please chose an option")
                     time.sleep(0.5)
