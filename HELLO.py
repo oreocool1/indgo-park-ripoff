@@ -11,6 +11,8 @@ def Welcome():
         name = open("test.txt","w")
         pronowns = input("what are your new pronowns?")
         name.write(pronowns)
+        name = open("test.txt","r")
+        print(name.read())
     elif option == "no" or option == "No" or option == "NO":
         name.close()
     else: print ("invalid input")

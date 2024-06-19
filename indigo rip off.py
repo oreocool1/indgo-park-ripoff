@@ -30,8 +30,9 @@ while end != "Yes" and end != "Death1" and end != "Death2":
             if option == "[A]":
                 print("Mhh let me just get a good look at you... mhh i dont recognise you please insert some details ~Rambally") 
                 time.sleep(2.0)
+                name = open("test.txt", "r")
                 name = input("What is your name?")
-                print ("Hi", name, "Meet me at the main gait and i'll let you in")
+                print ("Hi", name, "Meet me at the main gate and i'll let you in")
                 time.sleep(1.0)
                 while end != "Yes" and end != "Death1" and end != "Death2":
                     print("Whats the hold up the gate should be open ... mhhhh my mistake the gate is not open seemes like an error boot up the genrator to get the gate up")
