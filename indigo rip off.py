@@ -30,9 +30,6 @@ while end != "Yes" and end != "Death1" and end != "Death2":
             if option == "[A]":
                 print("Mhh let me just get a good look at you... mhh i dont recognise you please insert some details ~Rambally") 
                 time.sleep(2.0)
-                with open("test.txt", "r")as file:
-                    name = file.read()
-                print(name)
                 name = input("What is your name?")
                 print ("Hi", name, "Meet me at the main gate and i'll let you in")
                 time.sleep(1.0)
