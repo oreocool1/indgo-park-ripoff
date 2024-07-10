@@ -1,3 +1,4 @@
+from optparse import Option
 from pickle import TRUE
 import time
 import webbrowser
@@ -16,6 +17,15 @@ player_name = ""
 complete = open("test.txt", "w")
 complete.write("Well done for completing the game\n")
 complete.close()
+def menu():
+    opton = input('''
+New Game [N]
+Continue [C]''')
+    if opton == ("N"):
+        Maingame()
+    elif opton == ("C"):
+        Playerdata = open("DATA.txt", "r")
+        
 
 def Maingame():
     global end, Death, ramplush, mollyplush, player_name
