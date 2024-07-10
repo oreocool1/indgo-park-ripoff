@@ -11,6 +11,7 @@ collectible3 = False
 collectible4 = False
 collectible5 = False
 player_name = ""
+checkpoint = ""
 
 # Prepare the file to write completion details
 complete = open("test.txt", "w")
@@ -25,7 +26,7 @@ Continue [C]''')
     elif opton == ("C"):
         Playerdata = open("DATA.txt", "r")  
 def Start():
-    global end, Death
+    global end, Death, checkpoint
     
     while end != "Yes" and end != "Death1" and end != "Death2":
         print("You were urban exploring before you found an abandoned park and decided to enter it")
@@ -35,6 +36,7 @@ Try to move the rubble [B]
 ''')
 
     if option == "A":
+        checkpoint = "entry"
         entry()
     elif option == "B":
             Death = "boulders"
