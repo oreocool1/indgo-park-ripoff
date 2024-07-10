@@ -1,4 +1,3 @@
-from email.message import _PayloadType
 from pickle import TRUE
 import time
 import webbrowser
@@ -118,7 +117,7 @@ Try to move the rubble [B]
             Death = "boulders"
             end = "Death1"
         else:
-            print("Please choose [A] or [B] and type it in the square brackets. (please wait for the next text before typing)")
+            print("Please choose A or B DONT TYPE IT IN SQUARE BRACKETS!. (please wait for the next text before typing)")
         time.sleep(1.0)
 
 Maingame()
