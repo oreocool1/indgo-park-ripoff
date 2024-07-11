@@ -11,12 +11,16 @@ collectible3 = False
 collectible4 = False
 collectible5 = False
 player_name = ""
-checkpoint = ""
 
 # Prepare the file to write completion details
 complete = open("test.txt", "w")
 complete.write("Well done for completing the game")
 complete.close()
+def Save(checkpoint):
+    saveFile = open("save.txt", "w")
+    saveFile.write(checkpoint)
+    saveFile.close()
+
 def menu():
     opton = input('''
 New Game [N]
@@ -24,12 +28,25 @@ Continue [C]
 ''')
     if opton == ("N"):
         Start()
-    # elif opton == ("C"):
-    #     Playerdata = open("DATA.txt", "r")  
+    elif opton == ("C"):
+        Playerdata = open("save.txt", "r")
+        area = Playerdata.read()
+        if "entry" in area:
+            entry()
+        elif "reg" in area:
+            reg()
+        else:
+            Start()
 def Start():
     global end, Death, checkpoint
     
-    while end != "Yes" and end != "Death1" and end != "Death2":
+    #while end != "Yes" or end != "Death1" or end != "Death2" or end != "StartComp":
+    print("You were urban exploring before you found an abandoned park and decided to enter it")
+    option = input('''You see an open door. What do you do? 
+Enter the doorway [A]
+Try to move the rubble [B]
+''')
+    while option != "A" and option != "B":
         print("You were urban exploring before you found an abandoned park and decided to enter it")
         option = input('''You see an open door. What do you do? 
 Enter the doorway [A]
@@ -37,7 +54,8 @@ Try to move the rubble [B]
 ''')
 
     if option == "A":
-        checkpoint = "entry"
+        end = "StartComp"
+        Save("entry")
         entry()
     elif option == "B":
             Death = "boulders"
