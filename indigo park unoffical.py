@@ -38,7 +38,6 @@ Continue [C]
             Start()
 def Start():
     global end, Death, checkpoint
-    
     #while end != "Yes" or end != "Death1" or end != "Death2" or end != "StartComp":
     print("You were urban exploring before you found an abandoned park and decided to enter it")
     option = input('''You see an open door. What do you do? 
@@ -168,5 +167,4 @@ if end == "Yes":
     webbrowser.open_new("https://store.steampowered.com/app/2504480/Indigo_Park_Chapter_1/")
     webbrowser.open_new_tab("https://www.youtube.com/@UniqueGeese")
     time.sleep(1.5)
-    webbrowser.open_new("https://www.youtube.com/channel/UCuskA0lpZeXHTHS3kAIdnbw")
-    
+    webbrowser.open_new("https://www.youtube.com/channel/UCuskA0lpZeXHTHS3kAIdnbw")  
