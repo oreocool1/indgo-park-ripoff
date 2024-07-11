@@ -11,6 +11,7 @@ collectible3 = False
 collectible4 = False
 collectible5 = False
 player_name = ""
+option = ""
 
 # Prepare the file to write completion details
 complete = open("test.txt", "w")
@@ -21,46 +22,40 @@ def Save(checkpoint):
     saveFile.write(checkpoint)
     saveFile.close()
 def menu():
-    opton = input('''
+    global option
+    while option != "N" and option != "C":
+        opton = input('''
 New Game [N]
 Continue [C]
 ''')
-    if opton == ("N"):
-        Start()
-    elif opton == ("C"):
-        Playerdata = open("save.txt", "r")
-        area = Playerdata.read()
-        if "entry" in area:
-            entry()
-        elif "reg" in area:
-            reg()
-        else:
-            Start()
+        if opton == ("N"):
+         Start()
+        elif opton == ("C"):
+            Playerdata = open("save.txt", "r")
+            area = Playerdata.read()
+            if "entry" in area:
+              entry()
+            elif "reg" in area:
+             reg()
+            else:
+                print ("Error no DATA found")
+                menu()
 def Start():
-    global end, Death, checkpoint
-    
-    #while end != "Yes" or end != "Death1" or end != "Death2" or end != "StartComp":
-    print("You were urban exploring before you found an abandoned park and decided to enter it")
-    option = input('''You see an open door. What do you do? 
-Enter the doorway [A]
-Try to move the rubble [B]
-''')
+    global end, Death, checkpoint, option
     while option != "A" and option != "B":
         print("You were urban exploring before you found an abandoned park and decided to enter it")
         option = input('''You see an open door. What do you do? 
 Enter the doorway [A]
 Try to move the rubble [B]
 ''')
-
     if option == "A":
-        end = "StartComp"
         Save("entry")
         entry()
     elif option == "B":
             Death = "boulders"
             end = "Death1"
     else:
-        print("Please choose A or B DONT TYPE IT IN SQUARE BRACKETS!. (please wait for the next text before typing)")
+        print("chose between A and B plz")
 def entry():
     global end, Death, ramplush, mollyplush
     while end != "Yes" and end != "Death1" and end != "Death2":
