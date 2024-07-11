@@ -163,5 +163,4 @@ if end == "Yes":
     webbrowser.open_new("https://store.steampowered.com/app/2504480/Indigo_Park_Chapter_1/")
     webbrowser.open_new_tab("https://www.youtube.com/@UniqueGeese")
     time.sleep(1.5)
-    webbrowser.open_new("https://www.youtube.com/channel/UCuskA0lpZeXHTHS3kAIdnbw")
-    
+    webbrowser.open_new("https://www.youtube.com/channel/UCuskA0lpZeXHTHS3kAIdnbw")  
