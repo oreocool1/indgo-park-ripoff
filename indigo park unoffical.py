@@ -20,7 +20,6 @@ def Save(checkpoint):
     saveFile = open("save.txt", "w")
     saveFile.write(checkpoint)
     saveFile.close()
-
 def menu():
     opton = input('''
 New Game [N]
@@ -164,3 +163,10 @@ if end == "Yes":
     complete = open("test.txt", "r")
     print(complete.read())
     complete.close()
+    print ("here are some credits")
+    time.sleep(1.5)
+    webbrowser.open_new("https://store.steampowered.com/app/2504480/Indigo_Park_Chapter_1/")
+    webbrowser.open_new_tab("https://www.youtube.com/@UniqueGeese")
+    time.sleep(1.5)
+    webbrowser.open_new("https://www.youtube.com/channel/UCuskA0lpZeXHTHS3kAIdnbw")
+    
