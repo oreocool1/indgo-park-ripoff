@@ -15,16 +15,17 @@ checkpoint = ""
 
 # Prepare the file to write completion details
 complete = open("test.txt", "w")
-complete.write("Well done for completing the game\n")
+complete.write("Well done for completing the game")
 complete.close()
 def menu():
     opton = input('''
 New Game [N]
-Continue [C]''')
+Continue [C]
+''')
     if opton == ("N"):
         Start()
-    elif opton == ("C"):
-        Playerdata = open("DATA.txt", "r")  
+    # elif opton == ("C"):
+    #     Playerdata = open("DATA.txt", "r")  
 def Start():
     global end, Death, checkpoint
     
@@ -133,7 +134,7 @@ Try to move the rubble [B]
             end = "Death2"
     else:
         print("Chose an option")
-
+menu()
 if end == "Death1":
     print("You died to", Death, "Close and reopen the game to try again")
 if end == "Death2":
