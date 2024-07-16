@@ -88,7 +88,7 @@ def reg():
     print(f"Hi {player_name}, meet me at the main gate and I'll let you in")
     time.sleep(1.0)
                     
-    while end != "Yes" and end != "Death1" and end != "Death2":
+    while option != "A" and option != "B":
         print("What's the hold-up? The gate should be open... my mistake, the gate is not open. Seems like an error, boot up the generator to get the gate up")
         time.sleep(2.0)
         option = input('''Should you turn on the generator?
