@@ -37,6 +37,8 @@ Continue [C]
               entry()
             elif "reg" in area:
              reg()
+            elif "ramramrail" in area:
+                ramramrail()
             else:
                 print ("Error no DATA found")
                 menu()
@@ -71,6 +73,7 @@ Brainlessly walk left [B]
 ''')
                 
         if option == "A":
+            Save("reg")
             reg()
         elif option == "B":
             print("Buddy, you're going the wrong way. The registration desk is this way (points to the left)")
@@ -97,7 +100,6 @@ Yes [B]
         print("... Nothing happened")
         time.sleep(1.0)
     elif option == "B":
-        Save("ramblerail")
         print("You turn on the generator and go back to the gate.")
         time.sleep(1.0)
         print("Alright, for real this time. Welcome to Indigo Park.")
@@ -127,8 +129,9 @@ Walk into the park [C]
         print("You have already collected this plush.")
         time.sleep(1.0)
     elif option == "C":
-        end = "Yes"
+        Save("ramblerail")
         print("You enter the park")
+        ramramrail()
         time.sleep(1.0)
     else:
         print("Unable to do this actiom")
@@ -141,6 +144,7 @@ Try to move the rubble [B]
 ''')
         if option == "A":
             webbrowser.open_new("https://youtu.be/kaZxq9I0zUQ?si=6on3TxXcsp8MrSRq")
+            time.sleep(60.0)
             end = "Yes"
         if option == "B":
             Death = "crushed by boulders"
