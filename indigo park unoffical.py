@@ -59,8 +59,8 @@ Try to move the rubble [B]
     else:
         print("chose between A and B plz")
 def entry():
-    global end, Death, ramplush, mollyplush
-    while end != "Yes" and end != "Death1" and end != "Death2":
+    global end, Death, ramplush, mollyplush, option
+    while option != "A" and option != "B":
         print("You enter the room")
         print('''You look around and see a TV screen
 You walk towards the TV...
